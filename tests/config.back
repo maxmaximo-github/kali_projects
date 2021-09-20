@@ -1,0 +1,17 @@
+Host r1
+	HostName 2001:db8:cafe::1
+	User cesar
+	KexAlgorithms diffie-hellman-group-exchange-sha1
+	IdentityFile ~/.ssh/r1_id_rsa
+
+Host ns1.example.com
+	Hostname ns1.example.com
+	User cesar
+	KexAlgorithms diffie-hellman-group-exchange-sha1
+	IdentityFile ~/.ssh/r1_id_rsa
+
+Host sw2.example.com
+	Hostname sw2.example.com
+	User cesar
+	KexAlgorithms diffie-hellman-group-exchange-sha1
+	IdentityFile ~/.ssh/sw2_id_rsa

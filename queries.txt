@@ -1,0 +1,10 @@
+Host ns1.example.com has the RR AAAA with 2001:db8:cafe:1::500
+Host r1.example.com has the RR AAAA with 2001:db8:cafe:1::1
+Host r1.example.com has the RR AAAA with 2001:db8:cafe::1
+Host sw1.example.com has the RR AAAA with 2001:db8:cafe::100
+Host sw2.example.com has the RR AAAA with 2001:db8:cafe:1::100
+Host r2.example.com has the RR AAAA with 2001:db8:cafe:2::1
+Host r3.example.com has the RR AAAA with 2001:db8:cafe:3::1
+Host r4.example.com has the RR AAAA with 2001:db8:cafe:4::1
+Host r5.example.com has the RR AAAA with 2001:db8:cafe:5::1
+Host r15.example.com has the RR AAAA with 2001:db8:cafe:1::1500
