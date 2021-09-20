@@ -6,5 +6,5 @@ Host sw2.example.com has the RR AAAA with 2001:db8:cafe:1::100
 Host r2.example.com has the RR AAAA with 2001:db8:cafe:2::1
 Host r3.example.com has the RR AAAA with 2001:db8:cafe:3::1
 Host r4.example.com has the RR AAAA with 2001:db8:cafe:4::1
-Host r5.example.com doesn't AAAA
+Host r5.example.com has the RR AAAA with 2001:db8:cafe:5::1
 Host r15.example.com has the RR AAAA with 2001:db8:cafe:1::1500

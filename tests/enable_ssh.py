@@ -12,7 +12,6 @@ def pubkey_creation(*args):
             (ssh_dir/f"{device}_id_rsa").unlink()
             (ssh_dir/f"{device}_id_rsa.pub").unlink()
 
-
         if not args[-1]:
             command = (
                 f"ssh-keygen -f {ssh_dir}/{device}_id_rsa -b 4096 " +
