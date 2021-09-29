@@ -1,0 +1,7 @@
+- name: Configure IPv6 on GigabitEthernet0/3
+  cisco.ios.ios_l3_interfaces:
+    config:
+      - name: GigabitEthernet0/3
+        ipv6:
+        - address: "2001:db8:cafe:3::1/64"
+    state: merged

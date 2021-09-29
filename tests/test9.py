@@ -101,8 +101,8 @@ def main():
     data = (username, password)
 
     devices = [
-    "ns1.example.com",# "r1.example.com",
-    # "sw1.example.com", "sw2.example.com"
+    "ns1.example.com", "r1.example.com",
+    "sw1.example.com", "sw2.example.com"
     ]
 
     while True:
