@@ -1,0 +1,35 @@
+#    - name: Enable OSPFv3 on interfaces
+#      cisco.ios.ios_ospf_interfaces:
+#        config:
+#          - name: Giga {{ item }}
+#            address_family:
+#              - afi: ipv6
+#                process:
+#                  id: 1
+#                  area_id: 0
+        #with_items:
+        #  - 0/0
+        #  - 0/1
+        #  - 0/2
+        #  - 0/3
+        #  - 0/4
+        #  - 0/5
+#        state: merged
+#  tasks:
+#    - name: Show Statics
+#      vyos.vyos.vyos_command:
+#        commands:
+#          - show interfaces ethernet {{ item }}
+#      with_items:
+#        - eth0
+#        - eth1
+#   tasks:
+#    hosts: routers_vyos
+#    - name: Configuration OSPFv3
+#      vyos.vyos.vyos_config:
+#        lines:
+#          - set protocols ospfv3 area 0 interface {{ item }}
+#      with_items:
+#        - eth0
+#        - eth1
+#        - eth2

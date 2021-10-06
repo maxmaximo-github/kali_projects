@@ -1,0 +1,14 @@
+---
+- name: Configure Recursive DNS Option on Router Advertisement
+  hosts: routers
+
+  tasks:
+    - name: Configure IPv6 Address on interface
+      cisco.ios.ios_config:
+        lines:
+          - ipv6 enable
+          - ipv6 address 2001:db8:cafe:3::1/64
+          - no shutdown
+          - ipv6 nd ra dns server 2001:db8:cafe:1::500
+
+        parents: interface GigabitEthernet0/3

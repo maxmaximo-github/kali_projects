@@ -1,0 +1,1345 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0xfaa88ee0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-Cisco-1.25
+INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for r1.example.com: b'562dd9293b57630c4c20d2ac8229f982'
+DEBUG:paramiko.transport:Trying discovered key b'52f060f70f84f317abea630420778527' in /home/kali/.ssh/r1.example.com_id_rsa
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R1#
+DEBUG:netmiko:_read_channel_expect read_data: terminal
+DEBUG:netmiko:_read_channel_expect read_data:  width 511
+R1#
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R1#terminal width 511
+R1#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal len
+DEBUG:netmiko:_read_channel_expect read_data: gth 0
+R1#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+R1#
+DEBUG:netmiko:terminal length 0
+R1#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1#
+DEBUG:netmiko:Pattern found: # 
+R1#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onfigure te
+DEBUG:netmiko:_read_channel_expect read_data: rminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1(config)#
+DEBUG:netmiko:Pattern found: # 
+R1(config)#
+DEBUG:netmiko:write_channel: b'ipv6 router ospf 1\n'
+DEBUG:netmiko:Pattern is: ipv6\ router\ ospf\ 1
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 route
+DEBUG:netmiko:_read_channel_expect read_data: r ospf 1
+R1(config-rtr)#
+DEBUG:netmiko:Pattern found: ipv6\ router\ ospf\ 1 ipv6 router ospf 1
+R1(config-rtr)#
+DEBUG:netmiko:write_channel: b'router-id 1.1.1.1\n'
+DEBUG:netmiko:Pattern is: router\-id\ 1\.1\.1\.1
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: outer-
+DEBUG:netmiko:_read_channel_expect read_data: id 1.1.1.1
+R1(config-rtr)#
+DEBUG:netmiko:Pattern found: router\-id\ 1\.1\.1\.1 router-id 1.1.1.1
+R1(config-rtr)#
+DEBUG:netmiko:write_channel: b'default-information originate always\n'
+DEBUG:netmiko:Pattern is: default\-information\ originate\ always
+DEBUG:netmiko:_read_channel_expect read_data: d
+DEBUG:netmiko:_read_channel_expect read_data: efault-infor
+DEBUG:netmiko:_read_channel_expect read_data: mation or
+DEBUG:netmiko:_read_channel_expect read_data: iginate a
+DEBUG:netmiko:_read_channel_expect read_data: lways
+R1(config-rtr)#
+DEBUG:netmiko:Pattern found: default\-information\ originate\ always default-information originate always
+R1(config-rtr)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/0\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabiteth
+DEBUG:netmiko:_read_channel_expect read_data: ernet0/0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/0 int gigabitethernet0/0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: ipv6 ospf
+DEBUG:netmiko:_read_channel_expect read_data:  1 are
+DEBUG:netmiko:_read_channel_expect read_data: a 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/1\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/1
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabite
+DEBUG:netmiko:_read_channel_expect read_data: thernet0/1
+
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/1 int gigabitethernet0/1
+
+DEBUG:netmiko:Pattern is: (?:R1|#)
+DEBUG:netmiko:_read_channel_expect read_data: R1(config-if)#
+DEBUG:netmiko:Pattern found: (?:R1|#) R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 1
+DEBUG:netmiko:_read_channel_expect read_data:  area 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/2\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/2
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabite
+DEBUG:netmiko:_read_channel_expect read_data: thernet0/2
+R1(config-if)#
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/2 int gigabitethernet0/2
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 1 a
+DEBUG:netmiko:_read_channel_expect read_data: rea 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/3\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/3
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabit
+DEBUG:netmiko:_read_channel_expect read_data: ethernet0/3
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/3 int gigabitethernet0/3
+DEBUG:netmiko:Pattern is: (?:R1|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1(config-if)#
+DEBUG:netmiko:Pattern found: (?:R1|#) 
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 
+DEBUG:netmiko:_read_channel_expect read_data: 1 area 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/4\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/4
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabite
+DEBUG:netmiko:_read_channel_expect read_data: thernet0/4
+
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/4 int gigabitethernet0/4
+
+DEBUG:netmiko:Pattern is: (?:R1|#)
+DEBUG:netmiko:_read_channel_expect read_data: R1(config-if)#
+DEBUG:netmiko:Pattern found: (?:R1|#) R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 1 a
+DEBUG:netmiko:_read_channel_expect read_data: rea 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/5\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/5
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabitet
+DEBUG:netmiko:_read_channel_expect read_data: hernet0/5
+
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/5 int gigabitethernet0/5
+
+DEBUG:netmiko:Pattern is: (?:R1|#)
+DEBUG:netmiko:_read_channel_expect read_data: R1(config-if)#
+DEBUG:netmiko:Pattern found: (?:R1|#) R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 1 a
+DEBUG:netmiko:_read_channel_expect read_data: rea 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#ipv6 router ospf 1
+R1(config-rtr)#router-id 1.1.1.1
+R1(config-rtr)#default-information originate always
+R1(config-rtr)#int gigabitethernet0/0
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/1
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/2
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/3
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/4
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/5
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R1(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1(config-if)#
+DEBUG:netmiko:Pattern found: # 
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+R1#
+DEBUG:netmiko:Pattern found: end end
+R1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1#
+DEBUG:netmiko:Pattern found: # 
+R1#
+DEBUG:netmiko:exit_config_mode: end
+R1#
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xf9a012b0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.4p1 Debian-5
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.4p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for r41.example.com: b'e0a459dd2db29e3a96c64418dc1957a4'
+DEBUG:paramiko.transport:Trying discovered key b'ab12baac042300273f7d5d4a21d1b5d1' in /home/kali/.ssh/r41.example.com_id_rsa
+DEBUG:paramiko.transport:userauth is OK
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:paramiko.transport:Auth banner: b'Welcome to VyOS\n'
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:Debug msg: b'/home/vyos/.ssh/authorized_keys:4: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding'
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Linux r41 5.10.64-amd64-vyos #1 SMP Mon Sep 13 18:18:37 UTC 2021 x86_64
+
+The programs included with the Debian/VyOS GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian/VyOS GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+
+Last login: Sat Oct  2 18:59:38 2021 from 2001:db8:cafe:0:f165:d84c:881f:90a6
+vyos@r41:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+vyos@r41:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is vyos@r41:~$
+DEBUG:netmiko:write_channel: b'set terminal width 512\n'
+DEBUG:netmiko:Pattern is: terminal
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: et terminal width 512
+vyos@r41:~$ 
+DEBUG:netmiko:Pattern found: terminal set terminal width 512
+vyos@r41:~$ 
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: set terminal length 0
+
+DEBUG:netmiko:write_channel: b'set terminal length 0\n'
+DEBUG:netmiko:Pattern is: set\ terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: set terminal length 0
+
+DEBUG:netmiko:Pattern found: set\ terminal\ length\ 0 set terminal length 0
+
+DEBUG:netmiko:set terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: vyos@r41:~$ 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+vyos@r41:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'configure\n'
+DEBUG:netmiko:Pattern is: configure
+DEBUG:netmiko:_read_channel_expect read_data: configure
+
+DEBUG:netmiko:Pattern found: configure configure
+
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: [edit]
+vyos@r41# 
+[edit]
+vyos@r41# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 parameters router-id 4.4.4.4\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ parameters\ router\-id\ 4\.4\.4\.4
+DEBUG:netmiko:_read_channel_expect read_data: se
+DEBUG:netmiko:_read_channel_expect read_data: t protocols ospfv3 parameters router-id 4.4.4.4
+
+  Configuration path: [protocols ospfv3 parameters router-id 4.4.4.4] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ parameters\ router\-id\ 4\.4\.4\.4 set protocols ospfv3 parameters router-id 4.4.4.4
+
+  Configuration path: [protocols ospfv3 parameters router-id 4.4.4.4] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth0\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth0
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth0
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth0 set protocols ospfv3 area 0 interface eth0
+
+DEBUG:netmiko:Pattern is: (?:vyos@r41|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r41# 
+DEBUG:netmiko:Pattern found: (?:vyos@r41|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth1\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth1
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth1
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth1 set protocols ospfv3 area 0 interface eth1
+
+DEBUG:netmiko:Pattern is: (?:vyos@r41|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r41# 
+DEBUG:netmiko:Pattern found: (?:vyos@r41|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth2\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth2
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth2
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth2 set protocols ospfv3 area 0 interface eth2
+
+DEBUG:netmiko:Pattern is: (?:vyos@r41|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r41# 
+DEBUG:netmiko:Pattern found: (?:vyos@r41|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:configure
+set protocols ospfv3 parameters router-id 4.4.4.4
+
+  Configuration path: [protocols ospfv3 parameters router-id 4.4.4.4] already exists
+
+[edit]
+vyos@r41# set protocols ospfv3 area 0 interface eth0
+
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+[edit]
+vyos@r41# set protocols ospfv3 area 0 interface eth1
+
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+[edit]
+vyos@r41# set protocols ospfv3 area 0 interface eth2
+
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xfbe2e880
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.4p1 Debian-5
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.4p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for r51.example.com: b'0966ff8c6bcde263d4f018f0aced8792'
+DEBUG:paramiko.transport:Trying discovered key b'd4408d49064486a4b0623f04fe3956c2' in /home/kali/.ssh/r51.example.com_id_rsa
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b'Welcome to VyOS\n'
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:Debug msg: b'/home/vyos/.ssh/authorized_keys:3: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding'
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Linux r51 5.10.64-amd64-vyos #1 SMP Mon Sep 13 18:18:37 UTC 2021 x86_64
+
+The programs included with the Debian/VyOS GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian/VyOS GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+
+Last login: Sat Oct  2 18:59:51 2021 from 2001:db8:cafe:0:f165:d84c:881f:90a6
+vyos@r51:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+vyos@r51:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is vyos@r51:~$
+DEBUG:netmiko:write_channel: b'set terminal width 512\n'
+DEBUG:netmiko:Pattern is: terminal
+DEBUG:netmiko:_read_channel_expect read_data: se
+DEBUG:netmiko:_read_channel_expect read_data: t terminal width 512
+vyos@r51:~$ 
+DEBUG:netmiko:Pattern found: terminal set terminal width 512
+vyos@r51:~$ 
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: set terminal length 0
+
+DEBUG:netmiko:write_channel: b'set terminal length 0\n'
+DEBUG:netmiko:Pattern is: set\ terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: set terminal length 0
+
+DEBUG:netmiko:Pattern found: set\ terminal\ length\ 0 set terminal length 0
+
+DEBUG:netmiko:set terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: vyos@r51:~$ 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+vyos@r51:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'configure\n'
+DEBUG:netmiko:Pattern is: configure
+DEBUG:netmiko:_read_channel_expect read_data: configure
+
+DEBUG:netmiko:Pattern found: configure configure
+
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: [edit]
+vyos@r51# 
+[edit]
+vyos@r51# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 parameters router-id 5.5.5.5\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ parameters\ router\-id\ 5\.5\.5\.5
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 parameters router-id 5.5.5.5
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ parameters\ router\-id\ 5\.5\.5\.5 set protocols ospfv3 parameters router-id 5.5.5.5
+
+DEBUG:netmiko:Pattern is: (?:vyos@r51|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 parameters router-id 5.5.5.5] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r51# 
+DEBUG:netmiko:Pattern found: (?:vyos@r51|#) 
+  Configuration path: [protocols ospfv3 parameters router-id 5.5.5.5] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth0\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth0
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface 
+DEBUG:netmiko:_read_channel_expect read_data: eth0
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth0 set protocols ospfv3 area 0 interface eth0
+
+DEBUG:netmiko:Pattern is: (?:vyos@r51|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r51# 
+DEBUG:netmiko:Pattern found: (?:vyos@r51|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth1\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth1
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth1
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth1 set protocols ospfv3 area 0 interface eth1
+
+DEBUG:netmiko:Pattern is: (?:vyos@r51|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r51# 
+DEBUG:netmiko:Pattern found: (?:vyos@r51|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth2\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth2
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth2
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth2 set protocols ospfv3 area 0 interface eth2
+
+DEBUG:netmiko:Pattern is: (?:vyos@r51|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r51# 
+DEBUG:netmiko:Pattern found: (?:vyos@r51|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:configure
+set protocols ospfv3 parameters router-id 5.5.5.5
+
+  Configuration path: [protocols ospfv3 parameters router-id 5.5.5.5] already exists
+
+[edit]
+vyos@r51# set protocols ospfv3 area 0 interface eth0
+
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+[edit]
+vyos@r51# set protocols ospfv3 area 0 interface eth1
+
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+[edit]
+vyos@r51# set protocols ospfv3 area 0 interface eth2
+
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xd415bee0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-Cisco-1.25
+INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for r1.example.com: b'562dd9293b57630c4c20d2ac8229f982'
+DEBUG:paramiko.transport:Trying discovered key b'52f060f70f84f317abea630420778527' in /home/kali/.ssh/r1.example.com_id_rsa
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R1#
+DEBUG:netmiko:_read_channel_expect read_data: terminal w
+DEBUG:netmiko:_read_channel_expect read_data: idth 511
+R1#
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+R1#terminal width 511
+R1#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal len
+DEBUG:netmiko:_read_channel_expect read_data: gth 0
+R1#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+R1#
+DEBUG:netmiko:terminal length 0
+R1#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1#
+DEBUG:netmiko:Pattern found: # 
+R1#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onfigure t
+DEBUG:netmiko:_read_channel_expect read_data: erminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1(config)#
+DEBUG:netmiko:Pattern found: # 
+R1(config)#
+DEBUG:netmiko:write_channel: b'ipv6 router ospf 1\n'
+DEBUG:netmiko:Pattern is: ipv6\ router\ ospf\ 1
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 router o
+DEBUG:netmiko:_read_channel_expect read_data: spf 1
+R1(config-rtr)#
+DEBUG:netmiko:Pattern found: ipv6\ router\ ospf\ 1 ipv6 router ospf 1
+R1(config-rtr)#
+DEBUG:netmiko:write_channel: b'router-id 1.1.1.1\n'
+DEBUG:netmiko:Pattern is: router\-id\ 1\.1\.1\.1
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: outer-id 1.1.
+DEBUG:netmiko:_read_channel_expect read_data: 1.1
+R1(config-rtr)#
+DEBUG:netmiko:Pattern found: router\-id\ 1\.1\.1\.1 router-id 1.1.1.1
+R1(config-rtr)#
+DEBUG:netmiko:write_channel: b'default-information originate always\n'
+DEBUG:netmiko:Pattern is: default\-information\ originate\ always
+DEBUG:netmiko:_read_channel_expect read_data: de
+DEBUG:netmiko:_read_channel_expect read_data: fault-info
+DEBUG:netmiko:_read_channel_expect read_data: rmation ori
+DEBUG:netmiko:_read_channel_expect read_data: ginate alwa
+DEBUG:netmiko:_read_channel_expect read_data: ys
+R1(config-rtr)#
+DEBUG:netmiko:Pattern found: default\-information\ originate\ always default-information originate always
+R1(config-rtr)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/0\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabite
+DEBUG:netmiko:_read_channel_expect read_data: thernet0/0
+
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/0 int gigabitethernet0/0
+
+DEBUG:netmiko:Pattern is: (?:R1|#)
+DEBUG:netmiko:_read_channel_expect read_data: R1(config-if)#
+DEBUG:netmiko:Pattern found: (?:R1|#) R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 1 a
+DEBUG:netmiko:_read_channel_expect read_data: rea 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/1\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/1
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabit
+DEBUG:netmiko:_read_channel_expect read_data: ethernet0/
+DEBUG:netmiko:_read_channel_expect read_data: 1
+R1(config-if)#
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/1 int gigabitethernet0/1
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 
+DEBUG:netmiko:_read_channel_expect read_data: 1 area 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/2\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/2
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabiteth
+DEBUG:netmiko:_read_channel_expect read_data: ernet0/2
+R1(config-if)#
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/2 int gigabitethernet0/2
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 1 a
+DEBUG:netmiko:_read_channel_expect read_data: rea 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/3\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/3
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabit
+DEBUG:netmiko:_read_channel_expect read_data: ethernet0/3
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/3 int gigabitethernet0/3
+DEBUG:netmiko:Pattern is: (?:R1|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1(config-if)#
+DEBUG:netmiko:Pattern found: (?:R1|#) 
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 1 a
+DEBUG:netmiko:_read_channel_expect read_data: rea 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/4\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/4
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabitet
+DEBUG:netmiko:_read_channel_expect read_data: hernet0/4
+R1(config-if)#
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/4 int gigabitethernet0/4
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 1 a
+DEBUG:netmiko:_read_channel_expect read_data: rea 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'int gigabitethernet0/5\n'
+DEBUG:netmiko:Pattern is: int\ gigabitethernet0/5
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt gigabite
+DEBUG:netmiko:_read_channel_expect read_data: thernet0/5
+R1(config-if)#
+DEBUG:netmiko:Pattern found: int\ gigabitethernet0/5 int gigabitethernet0/5
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'ipv6 ospf 1 area 0\n'
+DEBUG:netmiko:Pattern is: ipv6\ ospf\ 1\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: pv6 ospf 
+DEBUG:netmiko:_read_channel_expect read_data: 1 area 0
+R1(config-if)#
+DEBUG:netmiko:Pattern found: ipv6\ ospf\ 1\ area\ 0 ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#ipv6 router ospf 1
+R1(config-rtr)#router-id 1.1.1.1
+R1(config-rtr)#default-information originate always
+R1(config-rtr)#int gigabitethernet0/0
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/1
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/2
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/3
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/4
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#int gigabitethernet0/5
+R1(config-if)#ipv6 ospf 1 area 0
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: R1
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1(config-if)#
+DEBUG:netmiko:Pattern found: R1 
+R1(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R1(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R1(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'write mem\n'
+DEBUG:netmiko:Pattern is: write\ mem
+DEBUG:netmiko:_read_channel_expect read_data: w
+DEBUG:netmiko:_read_channel_expect read_data: rite mem
+               ^
+% Invalid input detected at '^' marker.
+
+R1(config-if)#
+DEBUG:netmiko:Pattern found: write\ mem write mem
+               ^
+% Invalid input detected at '^' marker.
+
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R1(config-if)#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1(config-if)#
+DEBUG:netmiko:Pattern found: # 
+R1(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+R1#
+DEBUG:netmiko:Pattern found: end end
+R1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R1#
+DEBUG:netmiko:Pattern found: # 
+R1#
+DEBUG:netmiko:exit_config_mode: end
+R1#
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xd30d5250
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.4p1 Debian-5
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.4p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for r41.example.com: b'e0a459dd2db29e3a96c64418dc1957a4'
+DEBUG:paramiko.transport:Trying discovered key b'ab12baac042300273f7d5d4a21d1b5d1' in /home/kali/.ssh/r41.example.com_id_rsa
+DEBUG:paramiko.transport:userauth is OK
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:paramiko.transport:Auth banner: b'Welcome to VyOS\n'
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:Debug msg: b'/home/vyos/.ssh/authorized_keys:4: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding'
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Linux r41 5.10.64-amd64-vyos #1 SMP Mon Sep 13 18:18:37 UTC 2021 x86_64
+
+The programs included with the Debian/VyOS GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian/VyOS GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+
+Last login: Sat Oct  2 19:01:34 2021 from 2001:db8:cafe:0:f165:d84c:881f:90a6
+vyos@r41:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+vyos@r41:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is vyos@r41:~$
+DEBUG:netmiko:write_channel: b'set terminal width 512\n'
+DEBUG:netmiko:Pattern is: terminal
+DEBUG:netmiko:_read_channel_expect read_data: set
+DEBUG:netmiko:_read_channel_expect read_data:  terminal width 512
+vyos@r41:~$ 
+DEBUG:netmiko:Pattern found: terminal set terminal width 512
+vyos@r41:~$ 
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: set terminal length 0
+
+DEBUG:netmiko:write_channel: b'set terminal length 0\n'
+DEBUG:netmiko:Pattern is: set\ terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: set terminal length 0
+
+DEBUG:netmiko:Pattern found: set\ terminal\ length\ 0 set terminal length 0
+
+DEBUG:netmiko:set terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: vyos@r41:~$ 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+vyos@r41:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'configure\n'
+DEBUG:netmiko:Pattern is: configure
+DEBUG:netmiko:_read_channel_expect read_data: configure
+
+DEBUG:netmiko:Pattern found: configure configure
+
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: [edit]
+vyos@r41# 
+[edit]
+vyos@r41# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 parameters router-id 4.4.4.4\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ parameters\ router\-id\ 4\.4\.4\.4
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: et protocols ospfv3 parameters router-id 4.4.4.4
+
+  Configuration path: [protocols ospfv3 parameters router-id 4.4.4.4] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ parameters\ router\-id\ 4\.4\.4\.4 set protocols ospfv3 parameters router-id 4.4.4.4
+
+  Configuration path: [protocols ospfv3 parameters router-id 4.4.4.4] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth0\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth0
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth0
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth0 set protocols ospfv3 area 0 interface eth0
+
+DEBUG:netmiko:Pattern is: (?:vyos@r41|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r41# 
+DEBUG:netmiko:Pattern found: (?:vyos@r41|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth1\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth1
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth1
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth1 set protocols ospfv3 area 0 interface eth1
+
+DEBUG:netmiko:Pattern is: (?:vyos@r41|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r41# 
+DEBUG:netmiko:Pattern found: (?:vyos@r41|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth2\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth2
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth2
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth2 set protocols ospfv3 area 0 interface eth2
+
+DEBUG:netmiko:Pattern is: (?:vyos@r41|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r41# 
+DEBUG:netmiko:Pattern found: (?:vyos@r41|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:configure
+set protocols ospfv3 parameters router-id 4.4.4.4
+
+  Configuration path: [protocols ospfv3 parameters router-id 4.4.4.4] already exists
+
+[edit]
+vyos@r41# set protocols ospfv3 area 0 interface eth0
+
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+[edit]
+vyos@r41# set protocols ospfv3 area 0 interface eth1
+
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+[edit]
+vyos@r41# set protocols ospfv3 area 0 interface eth2
+
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+[edit]
+vyos@r41# 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[edit]
+vyos@r41# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[edit]
+vyos@r41# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is vyos@r41#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'commit\n'
+DEBUG:netmiko:Pattern is: commit
+DEBUG:netmiko:_read_channel_expect read_data: commit
+
+DEBUG:netmiko:Pattern found: commit commit
+
+DEBUG:netmiko:read_channel: No configuration changes to commit
+[edit]
+vyos@r41# 
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xd30d51c0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_8.4p1 Debian-5
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.4p1)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for r51.example.com: b'0966ff8c6bcde263d4f018f0aced8792'
+DEBUG:paramiko.transport:Trying discovered key b'd4408d49064486a4b0623f04fe3956c2' in /home/kali/.ssh/r51.example.com_id_rsa
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b'Welcome to VyOS\n'
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:Debug msg: b'/home/vyos/.ssh/authorized_keys:3: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding'
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:read_channel: Linux r51 5.10.64-amd64-vyos #1 SMP Mon Sep 13 18:18:37 UTC 2021 x86_64
+
+The programs included with the Debian/VyOS GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian/VyOS GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+
+Last login: Sat Oct  2 19:01:47 2021 from 2001:db8:cafe:0:f165:d84c:881f:90a6
+vyos@r51:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+vyos@r51:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is vyos@r51:~$
+DEBUG:netmiko:write_channel: b'set terminal width 512\n'
+DEBUG:netmiko:Pattern is: terminal
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: et terminal width 512
+vyos@r51:~$ 
+DEBUG:netmiko:Pattern found: terminal set terminal width 512
+vyos@r51:~$ 
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: set terminal length 0
+
+DEBUG:netmiko:write_channel: b'set terminal length 0\n'
+DEBUG:netmiko:Pattern is: set\ terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: set terminal length 0
+
+DEBUG:netmiko:Pattern found: set\ terminal\ length\ 0 set terminal length 0
+
+DEBUG:netmiko:set terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: vyos@r51:~$ 
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+vyos@r51:~$ 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'configure\n'
+DEBUG:netmiko:Pattern is: configure
+DEBUG:netmiko:_read_channel_expect read_data: configure
+
+DEBUG:netmiko:Pattern found: configure configure
+
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: [edit]
+vyos@r51# 
+[edit]
+vyos@r51# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 parameters router-id 5.5.5.5\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ parameters\ router\-id\ 5\.5\.5\.5
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 parameters router-id 5.5.5.5
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ parameters\ router\-id\ 5\.5\.5\.5 set protocols ospfv3 parameters router-id 5.5.5.5
+
+DEBUG:netmiko:Pattern is: (?:vyos@r51|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 parameters router-id 5.5.5.5] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r51# 
+DEBUG:netmiko:Pattern found: (?:vyos@r51|#) 
+  Configuration path: [protocols ospfv3 parameters router-id 5.5.5.5] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth0\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth0
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth0
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth0 set protocols ospfv3 area 0 interface eth0
+
+DEBUG:netmiko:Pattern is: (?:vyos@r51|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r51# 
+DEBUG:netmiko:Pattern found: (?:vyos@r51|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth1\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth1
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth1
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth1 set protocols ospfv3 area 0 interface eth1
+
+DEBUG:netmiko:Pattern is: (?:vyos@r51|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r51# 
+DEBUG:netmiko:Pattern found: (?:vyos@r51|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:write_channel: b'set protocols ospfv3 area 0 interface eth2\n'
+DEBUG:netmiko:Pattern is: set\ protocols\ ospfv3\ area\ 0\ interface\ eth2
+DEBUG:netmiko:_read_channel_expect read_data: set protocols ospfv3 area 0 interface eth2
+
+DEBUG:netmiko:Pattern found: set\ protocols\ ospfv3\ area\ 0\ interface\ eth2 set protocols ospfv3 area 0 interface eth2
+
+DEBUG:netmiko:Pattern is: (?:vyos@r51|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+
+DEBUG:netmiko:_read_channel_expect read_data: [edit]
+vyos@r51# 
+DEBUG:netmiko:Pattern found: (?:vyos@r51|#) 
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:configure
+set protocols ospfv3 parameters router-id 5.5.5.5
+
+  Configuration path: [protocols ospfv3 parameters router-id 5.5.5.5] already exists
+
+[edit]
+vyos@r51# set protocols ospfv3 area 0 interface eth0
+
+  Configuration path: [protocols ospfv3 area 0 interface eth0] already exists
+
+[edit]
+vyos@r51# set protocols ospfv3 area 0 interface eth1
+
+  Configuration path: [protocols ospfv3 area 0 interface eth1] already exists
+
+[edit]
+vyos@r51# set protocols ospfv3 area 0 interface eth2
+
+  Configuration path: [protocols ospfv3 area 0 interface eth2] already exists
+
+[edit]
+vyos@r51# 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[edit]
+vyos@r51# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[edit]
+vyos@r51# 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is vyos@r51#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'commit\n'
+DEBUG:netmiko:Pattern is: commit
+DEBUG:netmiko:_read_channel_expect read_data: commit
+
+DEBUG:netmiko:Pattern found: commit commit
+
+DEBUG:netmiko:read_channel: No configuration changes to commit
+[edit]
+vyos@r51# 
+DEBUG:netmiko:write_channel: b'exit\n'

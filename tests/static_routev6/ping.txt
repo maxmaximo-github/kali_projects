@@ -1,0 +1,36 @@
+Ping was success to 2001:db8:cafe::1
+Ping was success to 2001:db8:cafe:1::1
+Ping was success to 2001:db8:cafe:2::1
+Ping was success to 2001:db8:cafe:3::1
+Ping was success to 2001:db8:cafe:4::1
+Ping was not success to 2001:db8:cafe:5::1
+Ping was success to 2001:db8:cafe:4001::1
+Ping was success to 2001:db8:cafe:4::2
+Ping was success to 2001:db8:cafe:6::1
+Ping was success to 2001:db8:cafe:5001::1
+Ping was success to 2001:db8:cafe:5::2
+Ping was success to 2001:db8:cafe:6::2
+Ping was success to 2001:db8:cafe::1
+Ping was success to 2001:db8:cafe:1::1
+Ping was success to 2001:db8:cafe:2::1
+Ping was success to 2001:db8:cafe:3::1
+Ping was success to 2001:db8:cafe:4::1
+Ping was not success to 2001:db8:cafe:5::1
+Ping was success to 2001:db8:cafe:4001::1
+Ping was success to 2001:db8:cafe:4::2
+Ping was success to 2001:db8:cafe:6::1
+Ping was success to 2001:db8:cafe:5001::1
+Ping was success to 2001:db8:cafe:5::2
+Ping was success to 2001:db8:cafe:6::2
+Ping was success to 2001:db8:cafe::1 
+Ping was success to 2001:db8:cafe:1::1 
+Ping was success to 2001:db8:cafe:2::1 
+Ping was success to 2001:db8:cafe:3::1 
+Ping was success to 2001:db8:cafe:4::1 
+Ping was not success to 2001:db8:cafe:5::1
+Ping was success to 2001:db8:cafe:4001::1 
+Ping was success to 2001:db8:cafe:4::2 
+Ping was success to 2001:db8:cafe:6::1 
+Ping was success to 2001:db8:cafe:5001::1 
+Ping was success to 2001:db8:cafe:5::2 
+Ping was success to 2001:db8:cafe:6::2 

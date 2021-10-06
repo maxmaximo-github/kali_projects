@@ -1,0 +1,48 @@
+---
+- name: Configure Cisco Vyos
+  hosts: routers_vyos
+  tasks:
+    - name: Configure OSPFv3 Router ID
+      vyos.vyos.vyos_ospfv3:
+        config:
+          parameters:
+            router_id: '{{ routerId }}'
+        state: merged
+
+    - name: Configuration OSPFv3 on Interfaces
+      vyos.vyos.vyos_config:
+        lines:
+          - set protocols ospfv3 '{{ areaId }}' interface '{{ item }}'
+      with_items:
+        '{{ interfaces }}'
+
+- name: Configure Cisco Routers
+  hosts: routers_cisco
+  tasks:
+    - name: Create OSPFv3 Process 1
+      cisco.ios.ios_ospfv3:
+        config:
+          processes:
+            - process_id: 1
+              address_family:
+                - afi: ipv6
+                  unicast: true
+                  default_information:
+                    originate: true
+                    always: true
+                  router_id: '{{ routerId}}'
+        state: merged
+
+    - name: Enable OSPFv3 on Interfaces
+      cisco.ios.ios_ospf_interfaces:
+        config:
+          - name: '{{ item }}'
+            address_family:
+              - afi: ipv6
+                process:
+                  id: 1
+                  area_id: '{{ areaId}}'
+
+        state: merged
+      with_items:
+        '{{ interfaces }}'

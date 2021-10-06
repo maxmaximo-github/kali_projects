@@ -1,0 +1,57 @@
+{
+  "devices": [
+    {
+      "hostname": "r1.example.com",
+      "device_type": "cisco_ios",
+      "id_rsa": "~/.ssh/r1.example.com_id_rsa",
+      "interfaces": [
+        {
+          "name": "gigabitethernet0/4",
+          "IPv6": "2001:db8:cafe:4::1",
+        },
+        {
+          "name": "gigabitethernet0/5",
+          "IPv6": "2001:db8:cafe:5::1",
+        }
+      ]
+    },
+    {
+      "hostname": "r41.example.com",
+      "device_type": "vyos",
+      "id_rsa": "~/.ssh/r41.example.com_id_rsa",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "IPv6": "2001:db8:cafe:4001::1",
+        },
+        {
+          "name": "eth1",
+          "IPv6": "2001:db8:cafe:4::2"
+        },
+        {
+          "name": "eth2",
+          "IPv6": "2001:db8:cafe:6::2"
+        }
+      ],
+    },
+    {
+      "hostname": "r51.example.com",
+      "device_type": "vyos",
+      "id_rsa": "~/.ssh/r51.example.com_id_rsa",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "IPv6": "2001:db8:cafe:5001::1",
+        },
+        {
+          "name": "eth1",
+          "IPv6": "2001:db8:cafe:5::2"
+        },
+        {
+          "name": "eth2",
+          "IPv6": "2001:db8:cafe:6::1"
+        }
+      ],
+    },
+  ]
+}

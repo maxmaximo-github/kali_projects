@@ -1,0 +1,102 @@
+{
+  "devices": [
+    {
+      "hostname": "r1.example.com",
+      "device_type": "cisco_ios",
+      "username": "cesar",
+      "router_id": "1.1.1.1",
+      "id_rsa": "~/.ssh/r1.example.com_id_rsa",
+      "interfaces": [
+        {
+          "name": "gigabitethernet0/0",
+          "IPv6": "2001:db8:cafe::1",
+          "ospf": true,
+          "ospf_id": 1
+        },
+        {
+          "name": "gigabitethernet0/1",
+          "IPv6": "2001:db8:cafe:1::1",
+          "ospf": true,
+          "ospf_id": 1
+        },
+        {
+          "name": "gigabitethernet0/2",
+          "IPv6": "2001:db8:cafe:2::1",
+          "ospf": true,
+          "ospf_id": 1
+        },
+        {
+          "name": "gigabitethernet0/3",
+          "IPv6": "2001:db8:cafe:3::1",
+          "ospf": true,
+          "ospf_id": 1
+        },
+        {
+          "name": "gigabitethernet0/4",
+          "IPv6": "2001:db8:cafe:4::1",
+          "ospf": true,
+          "ospf_id": 1
+        },
+        {
+          "name": "gigabitethernet0/5",
+          "IPv6": "2001:db8:cafe:5::1",
+          "ospf": true,
+          "ospf_id": 1
+        },
+        {
+          "name": "gigabitethernet0/7",
+          "IPv6": "2001:db8:5000:500::2",
+          "ospf": false
+        }
+      ]
+    },
+    {
+      "hostname": "r41.example.com",
+      "device_type": "vyos",
+      "username": "vyos",
+      "router_id": "4.4.4.4",
+      "id_rsa": "~/.ssh/r41.example.com_id_rsa",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "IPv6": "2001:db8:cafe:4001::1",
+          "ospf": true
+        },
+        {
+          "name": "eth1",
+          "IPv6": "2001:db8:cafe:4::2",
+          "ospf": true
+        },
+        {
+          "name": "eth2",
+          "IPv6": "2001:db8:cafe:6::2",
+          "ospf": true
+        }
+      ]
+    },
+    {
+      "hostname": "r51.example.com",
+      "device_type": "vyos",
+      "username": "vyos",
+      "router_id": "5.5.5.5",
+      "id_rsa": "~/.ssh/r51.example.com_id_rsa",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "IPv6": "2001:db8:cafe:5001::1",
+          "ospf": true
+        },
+        {
+          "name": "eth1",
+          "IPv6": "2001:db8:cafe:5::2",
+          "ospf": true
+        },
+        {
+          "name": "eth2",
+          "IPv6": "2001:db8:cafe:6::1",
+          "ospf": true
+        }
+      ]
+    }
+  ]
+}
