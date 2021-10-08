@@ -1,0 +1,23 @@
+
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+DNSv6# configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+DNSv6(config)# ip host r5.example.com 2001:db8:cafe::8000 
+DNSv6(config)# ip host r2.example.com 2001:db8:cafe::900 
+DNSv6(config)# end 
+DNSv6# terminal lengt 0 
+DNSv6# show run | section ip host 
+ip host ns1.example.com 2001:DB8:CAFE:1::500
+ip host r1.example.com 2001:DB8:CAFE:1::1 2001:DB8:CAFE::1
+ip host sw1.example.com 2001:DB8:CAFE::100
+ip host sw2.example.com 2001:DB8:CAFE:1::100
+ip host r5.example.com 2001:DB8:CAFE::8000
+ip host r2.example.com 2001:DB8:CAFE::900
+DNSv6# exit 
