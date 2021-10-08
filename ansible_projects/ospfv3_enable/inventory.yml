@@ -6,7 +6,7 @@
           r41.example.com:
             ansible_ssh_private_key_file: ~/.ssh/r41.example.com_id_rsa
             routerId: 41.41.41.41
-            areaId: "area 0"
+            areaId: 0
             interfaces:
               - eth0
               - eth1
@@ -14,7 +14,7 @@
           r51.example.com:
             ansible_ssh_private_key_file: ~/.ssh/r51.example.com_id_rsa
             routerId: 51.51.51.51
-            areaId: "area 0"
+            areaId: 0
             interfaces:
               - eth0
               - eth1
